@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -47,7 +48,17 @@ public class FizzBuzzTest {
         assertEquals("16", subject.searchCorrectWord(16));
     }
 
-   
+    @Test
+    public void returnArrayOfValueFromOneToFive(){
+        String[] stringTest= {"1", "2", "Fizz", "4" , "Buzz"};
+        assertArrayEquals(stringTest, subject.generate(1, 5));
+    }
+    @Test
+    public void returnArrayOfValueFromOneToFifteen(){
+        String[] stringTest= {"1", "2", "Fizz", "4" , "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"};
+        assertArrayEquals(stringTest, subject.generate(1, 15));
+    }
+
 
 
 }

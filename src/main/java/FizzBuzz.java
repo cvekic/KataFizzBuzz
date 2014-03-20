@@ -18,4 +18,29 @@ public class FizzBuzz {
         }
         return String.valueOf(i);
     }
+
+    public String[] generate(int start, int stop) {
+        String[] generate = new String[stop - start + 1];
+        int index = 0;
+        for (int i = start; i <= stop; i++) {
+            if(i % 15 == 0) {
+                generate[index] = "FizzBuzz";
+                index++;
+                continue;
+            }
+            if(i % 3 == 0) {
+                generate[index] = "Fizz";
+                index++;
+                continue;
+            }
+            if(i % 5 == 0) {
+                generate[index] = "Buzz";
+                index++;
+                continue;
+            }
+            generate[index] = String.valueOf(i);
+            index++;
+        }
+        return generate;
+    }
 }
