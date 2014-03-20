@@ -59,6 +59,12 @@ public class FizzBuzzTest {
         assertArrayEquals(stringTest, subject.generate(1, 15));
     }
 
+    @Test
+    public void returnArrayOfValueFromTenToFifteen(){
+        String[] stringTest= {"Buzz", "11", "Fizz", "13", "14", "FizzBuzz"};
+        assertArrayEquals(stringTest, subject.generate(10, 15));
+    }
+
 
 
 }
